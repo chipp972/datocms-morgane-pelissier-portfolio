@@ -1,0 +1,54 @@
+:root {
+  --light-border: #e0e6ff;
+  --dark-border: #000415;
+
+  --light-text: #fff;
+  --dark-text: #000415;
+
+  --light-background: #fff;
+  --gradient-dark-background: #04103f;
+  --dark-background: #000415;
+
+  --cursor-color: #ffa52c;
+
+  --dark-green: #07626c;
+  --light-green: #e8fdff;
+
+  --tablet-width: 768px;
+
+  --nav-height: 60px;
+
+  --bullet-size: 5px;
+  --bubble-size: 44px;
+
+  --bubble-z-index: 100;
+  --menu-z-index: 999;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --nav-height: 100px;
+  }
+}
+
+.from-tablet {
+  display: none !important;
+}
+
+.from-tablet-flex {
+  display: none !important;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-only {
+    display: none !important;
+  }
+
+  .from-tablet {
+    display: block !important;
+  }
+
+  .from-tablet-flex {
+    display: flex !important;
+  }
+}

@@ -1,0 +1,43 @@
+.project-overview {
+  height: 100vh;
+  width: 100%;
+}
+
+.number-bubble {
+  display: none !important;
+}
+
+@media screen and (min-width: 768px) {
+  .number-bubble {
+    display: flex !important;
+    position: absolute;
+    left: calc(12% - var(--bubble-size) - 30px);
+    top: calc(var(--bubble-size) / -2);
+  }
+}
+
+.left-nav-bubble {
+  --right-margin: 10%;
+  --margin: 16px;
+  position: absolute;
+  right: calc(var(--right-margin) + 2 * var(--bubble-size) + var(--bullet-size) + var(--margin));
+  top: calc(var(--bubble-size) / -2);
+}
+
+.right-nav-bubble {
+  --right-margin: 10%;
+  position: absolute;
+  right: calc(var(--right-margin) + var(--bullet-size) + var(--bubble-size));
+  top: calc(var(--bubble-size) / -2);
+}
+
+@media screen and (min-width: 768px) {
+  .left-nav-bubble {
+    --right-margin: 12%;
+    --margin: 10px;
+  }
+
+  .right-nav-bubble {
+    --right-margin: 12%;
+  }
+}

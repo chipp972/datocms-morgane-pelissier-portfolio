@@ -1,0 +1,87 @@
+.projects-col {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: auto;
+  order: -1;
+}
+
+.projects-col ul {
+  position: absolute;
+  top: 104px;
+  left: 24px;
+}
+
+.project-button {
+  width: 100%;
+  position: relative;
+  margin-bottom: 24px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--light-text);
+  font-size: 36px;
+  font-family: 'GalleryModern';
+  text-align: left;
+}
+
+.menu-arrow {
+  opacity: 0;
+  position: relative;
+  top: -4px;
+  margin-right: 16px;
+  transition: opacity 0.3s;
+  width: 40px;
+}
+
+.menu-arrow.displayed {
+  opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .projects-col {
+    order: 0;
+  }
+
+  .projects-col ul {
+    top: 19%;
+    left: 10%;
+  }
+
+  .project-button {
+    font-size: 2.6rem;
+    padding: 2vh 0;
+    margin-bottom: 0;
+  }
+
+  /* Bullet point */
+  .project-button::before {
+    content: '';
+    position: absolute;
+    left: 56px;
+    top: calc(2vh + 2.6rem / 2);
+    opacity: 0;
+    width: 5px;
+    height: 5px;
+    display: block;
+    border-radius: 5px;
+    background: var(--cursor-color);
+    transition: opacity 0.3s;
+  }
+
+  .project-button:not(.current):hover::before,
+  .project-button:not(.current):focus-within::before {
+    opacity: 1;
+  }
+
+  .project-button.current:hover .menu-arrow,
+  .project-button.current:focus-within .menu-arrow {
+    transition: transform 0.3s;
+    transform: translateX(10px);
+  }
+
+  .menu-arrow {
+    margin-right: 26px;
+    width: 70px;
+  }
+}

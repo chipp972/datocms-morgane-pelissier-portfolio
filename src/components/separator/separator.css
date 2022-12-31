@@ -1,0 +1,67 @@
+.horizontal-separator {
+  width: 100%;
+  border-top: 1px solid var(--light-border);
+  border-bottom: 1px solid var(--dark-border);
+  position: relative;
+  transition: opacity 0.3s;
+}
+
+.vertical-separator {
+  height: 100%;
+  border-right: 1px solid var(--light-border);
+  border-left: 1px solid var(--dark-border);
+  position: relative;
+  transition: opacity 0.3s;
+}
+
+.bullet {
+  width: var(--bullet-size);
+  height: var(--bullet-size);
+  border-radius: 4px;
+  background: var(--light-border);
+  position: absolute;
+  transition: opacity 0.3s;
+}
+
+.horizontal-separator > .bullet {
+  top: -3px;
+}
+
+.horizontal-separator > .bullet.left {
+  left: 10%;
+}
+
+.horizontal-separator > .bullet.right {
+  right: 10%;
+}
+
+.vertical-separator > .bullet {
+  right: -3px;
+}
+
+.vertical-separator > .bullet.top {
+  top: 80px;
+}
+
+.vertical-separator > .bullet.bottom {
+  opacity: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .horizontal-separator > .bullet.left {
+    left: 12%;
+  }
+
+  .horizontal-separator > .bullet.right {
+    right: 12%;
+  }
+
+  .vertical-separator > .bullet.top {
+    top: 8%;
+  }
+
+  .vertical-separator > .bullet.bottom {
+    opacity: 1;
+    bottom: 22%;
+  }
+}

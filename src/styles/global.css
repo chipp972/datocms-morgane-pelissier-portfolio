@@ -1,3 +1,65 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import './variables.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;700;800&display=swap');
+
+@font-face {
+  font-family: 'GalleryModern';
+  src: url('/fonts/GalleryModern.otf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: var(--dark-background);
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: var(--light-text);
+}
+
+body,
+body * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body *::selection {
+  background: var(--cursor-color);
+  color: var(--light-text);
+}
+
+ul {
+  list-style: none;
+}
+
+@import './magic-mouse.css';
+
+.container {
+  background: var(--dark-background);
+  height: 100vh;
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.3s 0.5s;
+}
+
+.container-visible {
+  opacity: 1;
+}
+
+.horizontal-separator-top {
+  position: absolute;
+  left: 0;
+  top: var(--nav-height);
+}
+
+.horizontal-separator-middle {
+  position: absolute;
+  left: 0;
+  top: calc(var(--nav-height) + 30%);
+}

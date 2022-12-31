@@ -1,0 +1,22 @@
+@keyframes scrolling-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-1000vw);
+  }
+}
+
+.scrolling-banner-container {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.scrolling-banner {
+  animation: 200s linear 0s infinite alternate scrolling-right;
+  white-space: nowrap;
+  font-family: 'GalleryModern';
+  font-size: 2rem;
+  font-weight: 300;
+}

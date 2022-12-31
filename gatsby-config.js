@@ -2,7 +2,7 @@ require("dotenv").config();
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Blog Demo",
+    title: "Peliss'Portfolio",
   },
   plugins: [
     "gatsby-plugin-postcss",
@@ -15,8 +15,9 @@ module.exports = {
     },
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
-  ],
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-netlify"
+  ]
 };

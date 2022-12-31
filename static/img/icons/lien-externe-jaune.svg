@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="37px" height="37px" viewBox="0 0 37 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Menu" transform="translate(-515.000000, -727.000000)" stroke="#FFA52C" stroke-width="2.00032229">
+            <g id="Lien-externe-jaune" transform="translate(516.000000, 727.000000)">
+                <path d="M23.4112136,18.0965523 C14.0736439,18.0965523 6.51303164,11.7796967 6.51303164,3.89457862" id="Path" transform="translate(14.962123, 10.995565) rotate(-45.000000) translate(-14.962123, -10.995565) "></path>
+                <path d="M33.4535255,13.9368905 C24.1159558,13.9368905 16.5553436,20.2887912 16.5553436,28.1388642" id="Path" transform="translate(25.004435, 21.037877) rotate(-45.000000) translate(-25.004435, -21.037877) "></path>
+                <line x1="-4.94356271" y1="22.8420291" x2="31.2595045" y2="22.8420291" id="Path" transform="translate(13.157971, 22.842029) rotate(-45.000000) translate(-13.157971, -22.842029) "></line>
+            </g>
+        </g>
+    </g>
+</svg>

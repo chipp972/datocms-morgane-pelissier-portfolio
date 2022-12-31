@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="20px" viewBox="0 0 70 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Crédit-du-Nord" transform="translate(-325.000000, -340.000000)" stroke="#FFFFFF" stroke-width="2">
+            <g id="Retour-blanc" transform="translate(325.000000, 340.000000)">
+                <path d="M12.4469615,10 C5.56903991,10 7.28306304e-14,5.55212832 7.28306304e-14,0" id="Path" transform="translate(6.223481, 5.000000) scale(-1, 1) translate(-6.223481, -5.000000) "></path>
+                <path d="M12.4469615,10 C5.56903991,10 7.28306304e-14,14.4725478 7.28306304e-14,20" id="Path" transform="translate(6.223481, 15.000000) scale(-1, 1) translate(-6.223481, -15.000000) "></path>
+                <line x1="0" y1="10" x2="70" y2="10" id="Path" transform="translate(35.000000, 10.000000) scale(-1, 1) translate(-35.000000, -10.000000) "></line>
+            </g>
+        </g>
+    </g>
+</svg>
