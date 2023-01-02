@@ -63,7 +63,7 @@ body * {
   cursor: none;
 }
 
-@media screen and (min-width: 768px) {
+@media (pointer: fine) {
   body #magicPointer::before,
   body #magicPointer::after {
     display: block;

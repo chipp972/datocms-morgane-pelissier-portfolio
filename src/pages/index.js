@@ -2,14 +2,12 @@ import React from 'react';
 import { MenuScreen } from '../components/menu/menu-screen';
 import { HelmetDatoCms } from 'gatsby-source-datocms';
 import { graphql } from 'gatsby';
-import { magicMouse } from 'magicmouse.js';
 import PropTypes from 'prop-types';
 import { HorizontalSeparator } from '../components/separator';
 import { Bubble } from '../components/bubble/bubble';
 import { RightArrow } from '../components/icons/fleche-droite-blanche';
 import { ProjectSlider } from '../components/project-slider/project-slider';
 import { projectData } from '../project-data';
-
 import '../styles/global.css';
 import 'magicmouse.js/css/magic-mouse.css';
 
@@ -29,12 +27,9 @@ const Home = ({ data: { site, blog } }) => {
   const [isMenuVisible, setIsMenuVisible] = React.useState(false);
 
   React.useEffect(() => {
-    magicMouse(options);
     setIsVisible(true);
+    import('magicmouse.js').then(({ magicMouse }) => magicMouse(options));
   }, []);
-
-  // TODO: Remove
-  console.log({ currentProject, isProjectDetailVisible, isMenuVisible });
 
   const lastProjectPosition = projectData.projectList.length - 1;
 
