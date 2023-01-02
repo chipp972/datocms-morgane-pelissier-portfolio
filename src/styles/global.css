@@ -41,25 +41,42 @@ ul {
 @import './magic-mouse.css';
 
 .container {
-  background: var(--dark-background);
   height: 100vh;
   position: relative;
   opacity: 0;
   transition: opacity 0.3s 0.5s;
+
+  background-image: url('/img/bkgd-home.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 .container-visible {
   opacity: 1;
 }
 
-.horizontal-separator-top {
+.container .horizontal-separator-top {
   position: absolute;
   left: 0;
   top: var(--nav-height);
 }
 
-.horizontal-separator-middle {
+.container .horizontal-separator-middle {
   position: absolute;
   left: 0;
   top: calc(var(--nav-height) + 30%);
+}
+
+.container .projects-nav-box {
+  position: absolute;
+  display: flex;
+  top: calc(var(--bubble-size) / -2);
+  right: 80px;
+}
+
+@media screen and (min-width: 768px) {
+  .container .projects-nav-box {
+    right: calc(12% + 40px);
+  }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import { menuData } from './menu-data';
+import { projectData } from '../../project-data';
 import clsx from 'clsx';
 import './project-list.css';
 
@@ -12,23 +12,18 @@ export const ProjectList = ({
 }) => (
   <section className="projects-col">
     <ul>
-      {menuData.projectList.map(({ id, name }, index) => (
-        <li
-          key={name}
-          // TODO: Remove index shit
-          className={clsx('project-link', 'magic-hover', `project-${index + 1}`)}
-        >
+      {projectData.projectList.map(({ id, name, position }) => (
+        <li key={id} className="magic-hover">
           <button
-            className={clsx('project-button', { current: currentProject === id })}
+            className={clsx('project-button', { current: currentProject === position })}
             onClick={() => {
               setIsMenuVisible(false);
-              setCurrentProject(id);
+              setCurrentProject(position);
               // TODO: Maybe add a timeout to let the scrolling animation execute
               setIsProjectDetailVisible(true);
-            }}
-          >
+            }}>
             <img
-              className={clsx('menu-arrow', { displayed: currentProject === id })}
+              className={clsx('menu-arrow', { displayed: currentProject === position })}
               src="/img/icons/lien-jaune.svg"
               alt="Icon link to the right"
             />
@@ -41,7 +36,7 @@ export const ProjectList = ({
 );
 
 ProjectList.propTypes = {
-  currentProject: propTypes.string.isRequired,
+  currentProject: propTypes.number.isRequired,
   setCurrentProject: propTypes.func.isRequired,
   setIsMenuVisible: propTypes.func.isRequired,
   setIsProjectDetailVisible: propTypes.func.isRequired

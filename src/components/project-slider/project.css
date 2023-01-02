@@ -1,0 +1,134 @@
+.project {
+  min-height: 100vh;
+  height: 100%;
+  width: var(--project-overview-size);
+  display: inline-block;
+  font-size: 1rem;
+  overflow: hidden;
+  position: relative;
+  transition: width 0.3s;
+  padding: 24px;
+}
+
+.project .project-number {
+  display: none;
+}
+
+.project .project-info-container {
+  display: flex;
+  max-width: 72vw;
+}
+
+.project .project-image {
+  width: 72vw;
+  height: 330px;
+  margin-top: 89px;
+  transform: translateX(-24px);
+  transition: transform 1s;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.project.current-project .project-image {
+  transform: translateX(0);
+}
+
+.project-info .project-date {
+  font-size: 24px;
+  font-family: 'GalleryModern';
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.project-info .project-name {
+  font-family: 'GalleryModern';
+  font-weight: 400;
+  font-size: 58px;
+  line-height: 64px;
+}
+
+.project-info-container .project-action {
+  margin-left: auto;
+}
+
+.arrow-button {
+  border: none;
+  background: transparent;
+  padding: 34px 0 34px 16px;
+}
+
+.arrow-button img {
+  width: 40px;
+}
+
+.arrow-button .text {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .project .project-number {
+    display: flex;
+    position: absolute;
+    left: calc(12% - var(--bubble-size) - 20px);
+    top: calc(var(--nav-height) + 30% - var(--bubble-size) / 2)
+  }
+
+  .project .project-info-container {
+    position: absolute;
+    top: calc(var(--nav-height) + 25%);
+    left: calc(94vw * 3 / 4);
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .project-info-container .project-action {
+    margin-right: 10%;
+  }
+
+  .project .project-image {
+    width: 486px;
+    height: 100%;
+    transform: translateX(-6vw);
+    transition: transform 1s, left 1s, top 1s;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: calc((100% - 486px) / 2 - 12%);
+  }
+
+  .project-info .project-date {
+    font-size: 28.8px;
+  }
+
+  .project .project-name {
+    font-size: 7.5rem;
+    line-height: 6.2rem;
+    font-family: 'GalleryModern';
+    font-weight: 300;
+  }
+
+  .arrow-button {
+    display: flex;
+  }
+
+  .arrow-button .text {
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: var(--light-text);
+    margin-right: 15px;
+  }
+
+  .arrow-button img {
+    transition: transform 0.3s;
+    width: 70px;
+  }
+
+  .arrow-button:hover img {
+    transform: translateX(10px);
+  }
+}

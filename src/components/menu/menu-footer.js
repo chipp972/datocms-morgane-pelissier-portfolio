@@ -1,11 +1,11 @@
 import React from 'react';
 import { ScrollingBanner } from '../scrolling-banner/scrolling-banner';
-import { menuData } from './menu-data';
+import { projectData } from '../../project-data';
 import './menu-footer.css';
 
 export const MenuFooter = () => (
   <div className="menu-footer">
-    <h3>{menuData.moreClients.title}</h3>
-    <ScrollingBanner>{menuData.moreClients.clientList.join(' - ')} -&nbsp;</ScrollingBanner>
+    <h3>{projectData.moreClients.title}</h3>
+    <ScrollingBanner>{projectData.moreClients.clientList.join(' - ')} -&nbsp;</ScrollingBanner>
   </div>
 );

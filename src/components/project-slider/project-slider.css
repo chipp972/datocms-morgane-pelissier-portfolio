@@ -1,0 +1,6 @@
+.project-slider {
+  height: 100%;
+  width: 400vw;
+  transform: translateX(0);
+  transition: transform var(--project-nav-animation-duration);
+}

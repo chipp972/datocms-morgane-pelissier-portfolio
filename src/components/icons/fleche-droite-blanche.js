@@ -1,7 +1,8 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import './icon.css';
 
-export const RightArrow = () => (
+export const RightArrow = ({ style }) => (
   <svg
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
@@ -12,7 +13,7 @@ export const RightArrow = () => (
     width={7}
     height={10}
     xmlSpace="preserve"
-  >
+    style={style}>
     <g transform="translate(-1194.000000, -75.000000)">
       <g transform="translate(1194.000000, 75.000000)">
         <path className="st0" d="M7,5C3.7,5,1,2.8,1,0" />
@@ -21,3 +22,7 @@ export const RightArrow = () => (
     </g>
   </svg>
 );
+
+RightArrow.propTypes = {
+  style: propTypes.object
+};
